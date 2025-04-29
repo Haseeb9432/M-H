@@ -1,0 +1,88 @@
+.custom-navbar {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #fff, #e0e7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  position: absolute;
+  right: 30px;
+  width: 0;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.search-input.active {
+  width: 200px;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+.cart-badge {
+  font-size: 0.6rem;
+  padding: 4px 6px;
+  min-width: 20px;
+}
+
+@media (max-width: 992px) {
+  .search-input.active {
+    width: 150px;
+  }
+
+  .navbar-nav {
+    margin-bottom: 1rem;
+  }
+
+  .search-container {
+    margin-top: 1rem;
+  }
+}
